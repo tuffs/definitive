@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Unit } from '@/types/Unit';
 import { prisma } from '@/prisma/database';
@@ -31,9 +32,11 @@ export async function Sidebar() {
       <nav className="flex-1 space-y-2">
         {units.length > 0 ? (
           units.map((unit) => (
-            <Button key={unit.id} variant="ghost" className="w-full justify-start">
-              {unit.name}
-            </Button>
+            <Link key={unit.id} href={`/unit/${unit.id}`}>
+              <Button variant="ghost" className="w-full justify-start">
+                {unit.name}
+              </Button>
+            </Link>
           ))
         ) : (
           <p className="text-sm text-muted-foreground">No units available</p>
