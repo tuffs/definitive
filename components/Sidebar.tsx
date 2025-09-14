@@ -16,10 +16,10 @@ async function getUnits(): Promise<Unit[]> {
 export async function Sidebar() {
   const units: Unit[] = await getUnits();
   return (
-    <aside className="w-[15vw] border-r bg-background p-4 flex flex-col">
-      <div className="flex items-center space-x-2 mb-6">
+    <aside className="w-64 border-r bg-background p-4 flex flex-col shrink-0">
+      <div className="flex items-center space-x-2 mb-6 max-w-[100px]">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/shadcn.png" width={'175px'} />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <div>
