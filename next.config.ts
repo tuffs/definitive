@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    turbo: {
+      // No custom loaders needed; SWC is built-in
+    },
+  },
 };
 
 export default nextConfig;
