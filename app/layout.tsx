@@ -18,10 +18,12 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <div className="flex min-h-screen flex-row">
+        <div className="flex">
           <Sidebar />
-          <main className="flex-1 overflow-auto">
-            {children}
+          <main className="flex flex-col w-full border-l">
+            <div className="" style={{ marginLeft: '1.555rem' }}>
+              {children}
+            </div>
           </main>
         </div>
       </body>
